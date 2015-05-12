@@ -39,6 +39,7 @@ endif
 
 if has("gui_running")
     set go-=T
+    set go-=m
     " colorscheme solarized "install on http://ethanschoonover.com/solarized
     "https://github.com/junegunn/seoul256.vim
     "let g:seoul256_background = 233
