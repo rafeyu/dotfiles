@@ -1,0 +1,46 @@
+set number
+"set nocompatible
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set history=50
+set incsearch "incremental searching
+set autoindent
+set smartindent
+set title
+set background=dark
+set cmdheight=2
+"set nowrap
+
+" fungsi mirip autochdir
+autocmd BufEnter * silent! lcd %:p:h
+" auto close tag
+iabbrev </ </<C-X><C-O>
+" auto close brace
+imap ( ()<ESC>i
+imap { {}<ESC>i
+imap [ []<ESC>i
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+if has("vms")
+    set nobackup
+else
+    set backup
+    set undofile
+endif
+
+if has("gui_running")
+    set go-=T
+    " colorscheme solarized "install on http://ethanschoonover.com/solarized
+    "https://github.com/junegunn/seoul256.vim
+    "let g:seoul256_background = 233
+    "colorscheme seoul256
+    colorscheme molokai
+    let g:molokai_original = 1
+    let g:rehash256 = 1
+endif
+
+" mapping
+imap jk <Esc>

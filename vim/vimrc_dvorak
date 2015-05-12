@@ -1,0 +1,65 @@
+set number
+set nocompatible
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set history=50
+set incsearch "incremental searching
+set autoindent
+set smartindent
+set title
+set background=dark
+set cmdheight=2
+
+" airline
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+
+" powerline fonts
+let g:airline_powerline_fonts = 1
+
+" fungsi mirip autochdir
+autocmd BufEnter * silent! lcd %:p:h
+" auto close tag
+"iabbrev </ </<C-X><C-O>
+" auto close brace
+imap ( ()<ESC>i
+imap { {}<ESC>i
+imap [ []<ESC>i
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+if has("vms")
+    set nobackup
+else
+    set backup
+    set undofile
+endif
+
+if has("gui_running")
+    set go-=T
+    " colorscheme solarized "install on http://ethanschoonover.com/solarized
+    "https://github.com/junegunn/seoul256.vim
+    "let g:seoul256_background = 233
+    "colorscheme seoul256
+    colorscheme molokai
+    let g:molokai_original = 1
+    let g:rehash256 = 1
+    set lines=50 columns=100
+endif
+
+" mapping
+imap ht <Esc>
+
+" install plugins for the first time
+function! InstallPlugins()
+  echo "Installing molokai ..."
+  !git clone https://github.com/tomasr/molokai.git ~/.vim/bundle/molokai
+  echo "Installing nerdtree ..."
+  !git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+  echo "Installing vim-airline ..."
+  !git clone https://github.com/bling/vim-airline.git ~/.vim/bundle/vim-airline
+  echo "Installing dogmatic ..."
+  !git clone https://github.com/mrmargolis/dogmatic.vim.git ~/.vim/bundle/dogmatic.vim
+endfunction
