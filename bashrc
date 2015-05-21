@@ -1,5 +1,5 @@
 if [ -f /etc/bash_completion ]; then
-	    . /etc/bash_completion
+    . /etc/bash_completion
 fi
 
 xhost +local:root > /dev/null 2>&1
@@ -58,6 +58,18 @@ ex ()
   fi
 }
 
+# konek - konekin modem (non-sytemd only)
+# usage: konek <PROVIDER> start|restart|stop
+konek (){
+    if [[ $1 == "telkomsel" ]]; then
+        sudo /etc/init.d/net.ppp0 $2
+    elif [[ $1 == "tri" ]]; then
+        sudo /etc/init.d/net.ppp1 $2
+    else
+        echo "Connection failed!"
+    fi
+}
+
 #export PATH=$PATH:/home/ramdzi/.gem/ruby/2.1.0/bin
 # prompt
 #PS1='[\u@\h \W]\$ '
@@ -66,5 +78,3 @@ PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
 screenfetch
 alias gelap='xbacklight -10'
 alias terang='xbacklight +20'
-alias konek-telkomsel='sudo /etc/init.d/net.ppp0 start'
-alias konek-tri='sudo /etc/init.d/net.ppp1 start'
