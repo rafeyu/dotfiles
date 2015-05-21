@@ -181,5 +181,4 @@ bar {
 # startup apps
 exec_always --no-startup-id parcellite
 exec --no-startup-id wpa_gui -t
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/korosensei-ansatsu-kyoshitsu-assassination-classroom-1920x1080.jpg
 exec --no-startup-id devmon --exec-on-label "LABEL" "/usr/bin/udevil mount %f"
