@@ -179,6 +179,7 @@ bar {
 }
 
 # startup apps
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/*-wallp-used.*
 exec_always --no-startup-id parcellite
 exec --no-startup-id wpa_gui -t
 exec --no-startup-id devmon --exec-on-label "LABEL" "/usr/bin/udevil mount %f"
