@@ -76,5 +76,3 @@ konek (){
 PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
 
 screenfetch
-alias gelap='xbacklight -10'
-alias terang='xbacklight +20'
