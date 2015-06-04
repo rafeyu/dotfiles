@@ -11,6 +11,10 @@ set title
 set background=dark
 set cmdheight=2
 
+" unwanted spaces! {already tab and trail}
+set listchars=tab:>-,trail:-
+set list
+
 " airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
