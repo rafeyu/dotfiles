@@ -70,7 +70,7 @@ konek (){
     fi
 }
 
-#export PATH=$PATH:/home/ramdzi/.gem/ruby/2.1.0/bin
+export PATH=$PATH:~/.gem/ruby/2.0.0/bin
 # prompt
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
