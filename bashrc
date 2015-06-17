@@ -16,6 +16,8 @@ shopt -s histappend
 shopt -s hostcomplete
 shopt -s nocaseglob
 
+source ~/.dynamicthings
+
 export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
