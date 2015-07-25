@@ -14,17 +14,18 @@ general {
 order += "disk /"
 order += "disk /home"
 order += "sysdata"
+order += "wireless wlp1s0"
 order += "battery 0"
 order += "volume master"
 order += "load"
 order += "tztime local"
 
-wireless wlan0 {
+wireless wlp1s0 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
 }
 
-ethernet eth0 {
+ethernet enp2s0 {
         # if you use %speed, i3status requires root privileges
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
@@ -37,7 +38,7 @@ battery 0 {
 }
 
 tztime local {
-        format = "%d-%m-%Y %H:%M:%S"
+        format = "%d-%m-%Y %H:%M"
 }
 
 load {
@@ -50,7 +51,6 @@ disk "/" {
 
 disk "/home" {
         format = "~ %free"
-        #on_click = "sunflower"
 }
 
 volume master {
@@ -58,7 +58,6 @@ volume master {
         device = "default"
         mixer = "Master"
         mixer_idx = 0
-        #click = "urxvtc -e alsamixer"
 }
 
 netdata {
