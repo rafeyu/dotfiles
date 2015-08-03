@@ -59,7 +59,3 @@ volume master {
         mixer = "Master"
         mixer_idx = 0
 }
-
-netdata {
-        nic = "ppp1"
-}
