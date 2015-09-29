@@ -161,10 +161,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# I disabled it, use volumeicon instead
 # set volume
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+# bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+# bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+# bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # set printscreen with scrot
 bindsym Print exec scrot -e 'mv $f ~/Pictures/bebas/'
@@ -181,4 +182,5 @@ bar {
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper/*-wallp-used.*
 exec_always --no-startup-id parcellite
 exec --no-startup-id wpa_gui -t
+exec --no-startup-id volumeicon
 exec --no-startup-id devmon --exec-on-label "LABEL" "/usr/bin/udevil mount %f"
